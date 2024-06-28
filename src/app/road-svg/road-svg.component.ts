@@ -36,7 +36,6 @@ export class SvgIconComponent implements OnInit {
     let elements = Array.from(document.getElementsByClassName('road') as HTMLCollectionOf<HTMLElement>)
     for (let i = 0; i < elements.length; i++) {
       elements[i].addEventListener('mouseenter', function() {
-        console.log("gggggg",this.style);
         let classNames = elements[i].classList;
         let roadId: String = "";
         classNames.forEach(className => {
@@ -49,14 +48,12 @@ export class SvgIconComponent implements OnInit {
           detail: { message: roadId }
         });
         
-        // Dispatch the event on the document
         document.dispatchEvent(customEvent);
         
         this.style.filter = 'brightness(0) saturate(100%) invert(80%) sepia(91%) saturate(232%) hue-rotate(333deg) brightness(101%) contrast(99%)';
       });
   
       elements[i].addEventListener('mouseleave', function() {
-        console.log("mouseleave");
         this.style.filter = '';
       });
   }

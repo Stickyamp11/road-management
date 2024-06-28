@@ -35,7 +35,6 @@ export class AppComponent implements OnInit {
     this.fetchRoadData(0);
 
     this.renderer.listen('document', 'roadHover', (event: CustomEvent) => {
-      console.log('Received custom event:', event.detail);
       this.fetchRoadData(parseInt(event.detail.message));
     });
     
