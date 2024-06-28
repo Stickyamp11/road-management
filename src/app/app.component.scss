@@ -1,0 +1,21 @@
+
+.main_frame{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    & > *{
+        flex: 0 0 500px;
+    }
+}
+.svg_wrapper{
+    width: 500px;
+    height: 500px;
+}
+.road_info_board{
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid rgb(150, 150, 150);
+    padding: 20px;
+}
